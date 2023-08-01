@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello GUVI GEEK</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="greet">Hello GUVI GEEK</h1>
+        <p>GUVI is an IIT-M & IIM-A incubated Ed-tech company that focuses on providing personalized learning solutions for its learners right from online learning,<br>upskilling & recruitment opportunities in world-class quality. And, bestow tech-skills with the comfort of your native language.</p>
+        <button id="changeColorBtn" onclick="changeColor()">Change Color</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const greetText = document.getElementById("greet");
+    const changeColorBtn = document.getElementById("changeColorBtn");
+    let currentColor = 0;
+    const colors = ["#0066cc", "#ff6600", "#008000", "#ff0000"];
+
+    changeColorBtn.addEventListener("click", function() {
+        currentColor = (currentColor + 1) % colors.length;
+        greetText.style.color = colors[currentColor];
+    });
+});
+    </script>
+</body>
+</html>

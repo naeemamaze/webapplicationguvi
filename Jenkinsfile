@@ -19,8 +19,10 @@ pipeline {
         stage('Docker Build and Push') {
             steps {
                 // Build the Docker image and push to Docker Hub
+                script {
                 def dockerImage = docker.build("naeemamaze/webserver:latest")
                 dockerImage.push()
+                }
             }
         }
     }
